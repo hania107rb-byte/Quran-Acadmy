@@ -1,0 +1,972 @@
+/* =====================================================
+   ATTENDANCE PAGE
+===================================================== */
+
+.attendance-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 28px;
+  background: #f6f8fb;
+  box-sizing: border-box;
+  color: #1e293b;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.attendance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.attendance-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.title-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f766e;
+  color: white;
+  font-size: 23px;
+  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2);
+}
+
+.attendance-title h1 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  font-weight: 750;
+  color: #0f172a;
+}
+
+.attendance-title p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.date-picker-wrapper {
+  background: white;
+  padding: 13px 16px;
+  border-radius: 13px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+  min-width: 210px;
+}
+
+.date-picker-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 7px;
+}
+
+.date-picker-wrapper input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* =====================================================
+   ALERTS
+===================================================== */
+
+.attendance-error,
+.attendance-success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 17px;
+  border-radius: 11px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attendance-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.attendance-success {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
+}
+
+.stat-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.stat-card.total .stat-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.stat-card.present .stat-icon {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.stat-card.absent .stat-icon {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.stat-card.leave .stat-icon {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.stat-card span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 23px;
+  color: #0f172a;
+}
+
+/* =====================================================
+   CONTROL BAR
+===================================================== */
+
+.attendance-controls {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 15px 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
+}
+
+.bulk-actions,
+.main-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.quick-label {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+  margin-right: 3px;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.bulk-btn,
+.view-records-btn,
+.save-btn,
+.refresh-records-btn,
+.close-records-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: 0.2s ease;
+}
+
+.bulk-btn {
+  padding: 9px 12px;
+}
+
+.bulk-btn:disabled,
+.save-btn:disabled,
+.view-records-btn:disabled,
+.refresh-records-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.present-btn {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.present-btn:hover:not(:disabled) {
+  background: #d1fae5;
+}
+
+.absent-btn {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.absent-btn:hover:not(:disabled) {
+  background: #fee2e2;
+}
+
+.leave-btn {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.leave-btn:hover:not(:disabled) {
+  background: #fef3c7;
+}
+
+.view-records-btn {
+  padding: 10px 15px;
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.view-records-btn:hover:not(:disabled) {
+  background: #e0e7ff;
+}
+
+.save-btn {
+  padding: 10px 17px;
+  background: #0f766e;
+  color: white;
+  box-shadow: 0 5px 12px rgba(15, 118, 110, 0.18);
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #115e59;
+}
+
+/* =====================================================
+   TABLE CARD
+===================================================== */
+
+.attendance-table-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
+}
+
+.table-heading {
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-heading h2 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  color: #0f172a;
+}
+
+.table-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.student-count {
+  padding: 7px 11px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.attendance-table thead {
+  background: #f8fafc;
+}
+
+.attendance-table th {
+  padding: 13px 20px;
+  text-align: left;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.attendance-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.attendance-table tbody tr {
+  transition: 0.15s ease;
+}
+
+.attendance-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.attendance-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =====================================================
+   STUDENT
+===================================================== */
+
+.student-id {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 7px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.student-avatar {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.student-info strong {
+  display: block;
+  color: #1e293b;
+  font-size: 13px;
+}
+
+.student-info small {
+  display: block;
+  margin-top: 2px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.course-text {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* =====================================================
+   STATUS SELECT
+===================================================== */
+
+.status-select {
+  min-width: 125px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid;
+}
+
+.status-select.present {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #047857;
+}
+
+.status-select.absent {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.status-select.leave {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #b45309;
+}
+
+/* =====================================================
+   LOADING / EMPTY
+===================================================== */
+
+.attendance-loading,
+.attendance-empty {
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #64748b;
+}
+
+.attendance-loading svg,
+.attendance-empty svg {
+  font-size: 30px;
+  color: #0f766e;
+  margin-bottom: 12px;
+}
+
+.attendance-loading p,
+.attendance-empty p {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.attendance-empty h3 {
+  margin: 0;
+  color: #334155;
+}
+
+/* =====================================================
+   RECORDS SECTION
+===================================================== */
+
+.records-section {
+  margin-top: 25px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 7px 22px rgba(15, 23, 42, 0.055);
+}
+
+.records-header {
+  padding: 19px 21px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.records-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.records-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.records-title h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.records-title p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.records-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.refresh-records-btn {
+  padding: 9px 12px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.refresh-records-btn:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+.close-records-btn {
+  padding: 9px 12px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.close-records-btn:hover {
+  background: #fee2e2;
+}
+
+/* =====================================================
+   RECORD LIST
+===================================================== */
+
+.records-list {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.record-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.record-card-header {
+  padding: 15px 17px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.record-date {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.record-date-icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 10px;
+  background: #ecfdf5;
+  color: #0f766e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.record-date span {
+  display: block;
+  color: #94a3b8;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.record-date strong {
+  display: block;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.record-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.record-summary span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.summary-present {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.summary-absent {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.summary-leave {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+/* =====================================================
+   RECORD STUDENTS
+===================================================== */
+
+.record-students {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.record-student {
+  padding: 12px 17px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.record-student:nth-child(odd) {
+  border-right: 1px solid #f1f5f9;
+}
+
+.record-student-info {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.record-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.record-student-info strong {
+  display: block;
+  font-size: 12px;
+  color: #334155;
+}
+
+.record-student-info small {
+  display: block;
+  margin-top: 2px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.record-status {
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.record-status.present {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.record-status.absent {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.record-status.leave {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+/* =====================================================
+   RECORD MESSAGE
+===================================================== */
+
+.records-message {
+  min-height: 220px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #64748b;
+}
+
+.records-message svg {
+  font-size: 30px;
+  margin-bottom: 12px;
+  color: #6366f1;
+}
+
+.records-message h3 {
+  margin: 0 0 5px;
+  color: #334155;
+  font-size: 16px;
+}
+
+.records-message p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.records-message.error {
+  color: #b91c1c;
+}
+
+.records-message.error svg {
+  color: #dc2626;
+}
+
+.records-message.error h3 {
+  color: #b91c1c;
+}
+
+.records-message button {
+  margin-top: 14px;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #0f766e;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =====================================================
+   NO STUDENTS
+===================================================== */
+
+.no-record-students {
+  padding: 20px;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* =====================================================
+   SPINNER
+===================================================== */
+
+.spin {
+  animation: attendanceSpin 1s linear infinite;
+}
+
+@keyframes attendanceSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .attendance-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .main-actions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 800px) {
+  .attendance-page {
+    padding: 18px;
+  }
+
+  .attendance-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .date-picker-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .record-students {
+    grid-template-columns: 1fr;
+  }
+
+  .record-student:nth-child(odd) {
+    border-right: none;
+  }
+
+  .record-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .records-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .records-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .attendance-page {
+    padding: 12px;
+  }
+
+  .attendance-title h1 {
+    font-size: 22px;
+  }
+
+  .attendance-title p {
+    font-size: 12px;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 13px;
+  }
+
+  .stat-icon {
+    width: 37px;
+    height: 37px;
+    font-size: 15px;
+  }
+
+  .stat-card strong {
+    font-size: 19px;
+  }
+
+  .attendance-controls {
+    padding: 12px;
+  }
+
+  .bulk-actions,
+  .main-actions {
+    width: 100%;
+  }
+
+  .bulk-btn,
+  .view-records-btn,
+  .save-btn {
+    flex: 1;
+  }
+
+  .table-heading {
+    padding: 15px;
+  }
+
+  .records-list {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .bulk-actions,
+  .main-actions {
+    flex-direction: column;
+  }
+
+  .bulk-btn,
+  .view-records-btn,
+  .save-btn {
+    width: 100%;
+  }
+
+  .records-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .refresh-records-btn,
+  .close-records-btn {
+    width: 100%;
+  }
+}

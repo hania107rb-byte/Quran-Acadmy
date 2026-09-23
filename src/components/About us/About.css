@@ -1,0 +1,252 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+.about{
+    width:100%;
+    padding:2px 0%;
+    background:linear-gradient(135deg,#f8fbff,#eef6ff);
+    overflow:hidden;
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/*======================
+    LEFT SECTION
+=======================*/
+
+.about-left{
+    flex:1;
+    min-width:340px;
+}
+
+.about-box{
+    background:#fff;
+    padding:10px;
+    border-radius:25px;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+    position:relative;
+    overflow:hidden;
+}
+
+.about-box::before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:#0d9488;
+    opacity:.08;
+    top:-90px;
+    right:-90px;
+}
+
+.circle{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0d9488,#06b6d4);
+    margin-bottom:25px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.about-box h1{
+    font-size:40px;
+    color:#0f172a;
+    margin-bottom:15px;
+}
+
+.about-box p{
+    color:#64748b;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+/*======================
+      STATS
+=======================*/
+
+.about-stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.stat-card{
+    background:#f8fafc;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.stat-card:hover{
+    background:#0d9488;
+    color:#fff;
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(13,148,136,.35);
+}
+
+.stat-card svg{
+    font-size:34px;
+    color:#0d9488;
+    margin-bottom:12px;
+    transition:.4s;
+}
+
+.stat-card:hover svg{
+    color:#fff;
+}
+
+.stat-card h2{
+    font-size:28px;
+    margin-bottom:0px;
+}
+
+.stat-card span{
+    font-size:15px;
+}
+
+/*======================
+    RIGHT SECTION
+=======================*/
+
+.about-content{
+    flex:1;
+    min-width:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 10px;
+    background:#d1fae5;
+    color:#047857;
+    border-radius:30px;
+    font-size:24px;
+    font-weight:600;
+    margin-bottom:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content h2{
+    font-size:42px;
+    color:#0f172a;
+    line-height:1.3;
+    margin-bottom:8px;
+}
+
+.about-content h2 span{
+    color:#0d9488;
+}
+
+.about-content p{
+    color:#64748b;
+    line-height:1.9;
+    margin-bottom:5px;
+}
+
+/*======================
+     FEATURE LIST
+=======================*/
+
+.about-list{
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:0px;
+}
+
+.about-list div{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:16px 10px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    transition:.35s;
+    cursor:pointer;
+    margin-bottom: 2px;
+}
+
+.about-list div:hover{
+    transform:translateX(10px);
+    background:#0d9488;
+    color:#fff;
+}
+
+.about-list svg{
+    font-size:22px;
+    color:#10b981;
+    transition:.35s;
+}
+
+.about-list div:hover svg{
+    color:#fff;
+}
+
+/*======================
+      BUTTON
+=======================*/
+
+.about-btn{
+    padding:19px ;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#0d9488,#06b6d4);
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    margin-top: 5px;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:0 15px 30px rgba(13,148,136,.35);
+    margin-top: 10px;
+}
+
+.about-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(13,148,136,.45);
+}
+
+/*======================
+    RESPONSIVE
+=======================*/
+
+@media(max-width:992px){
+
+.container{
+    flex-direction:column;
+    gap:5px;}
+}

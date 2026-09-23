@@ -1,0 +1,713 @@
+/* =====================================================
+   FEE MANAGEMENT PAGE
+===================================================== */
+
+.fee-management-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+  color: #1f2937;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.fee-page-header {
+  background: linear-gradient(135deg, #0f766e, #115e59);
+  border-radius: 18px;
+  padding: 28px 32px;
+  color: white;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.18);
+}
+
+.fee-header-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.fee-header-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.fee-header-content h1 {
+  margin: 0 0 7px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.fee-header-content p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* =====================================================
+   SUMMARY CARDS
+===================================================== */
+
+.fee-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.fee-summary-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: 0.25s ease;
+}
+
+.fee-summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.09);
+}
+
+.summary-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.fee-summary-card span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.fee-summary-card h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #111827;
+}
+
+/* Card colors */
+
+.fee-summary-card.blue .summary-icon {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.fee-summary-card.orange .summary-icon {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.fee-summary-card.green .summary-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.fee-summary-card.purple .summary-icon {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+/* =====================================================
+   MANAGEMENT CARD
+===================================================== */
+
+.fee-management-card {
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.fee-toolbar {
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.fee-toolbar-title {
+  margin-right: auto;
+}
+
+.fee-toolbar-title h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.fee-toolbar-title p {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.fee-search {
+  width: 280px;
+  height: 42px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  background: #f9fafb;
+  transition: 0.2s ease;
+}
+
+.fee-search svg {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.fee-search:focus-within {
+  border-color: #0f766e;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.fee-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* =====================================================
+   FILTER
+===================================================== */
+
+.fee-filter {
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+  cursor: pointer;
+  color: #374151;
+  font-size: 13px;
+}
+
+.fee-filter:focus {
+  border-color: #0f766e;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.fee-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.fee-table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+}
+
+.fee-table thead {
+  background: #f8fafc;
+}
+
+.fee-table th {
+  padding: 15px 18px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.fee-table td {
+  padding: 17px 18px;
+  border-bottom: 1px solid #eef2f7;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.fee-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.fee-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =====================================================
+   STUDENT INFO
+===================================================== */
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-avatar {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #0f766e,
+    #14b8a6
+  );
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.student-info strong {
+  display: block;
+  color: #111827;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.student-info span {
+  display: block;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* =====================================================
+   COURSE
+===================================================== */
+
+.course-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+}
+
+.course-info svg {
+  color: #0f766e;
+}
+
+.course-info span {
+  white-space: nowrap;
+}
+
+/* =====================================================
+   FEE AMOUNT
+===================================================== */
+
+.fee-amount {
+  color: #0f766e;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   DUE DATE
+===================================================== */
+
+.due-date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.due-date svg {
+  color: #f59e0b;
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.fee-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.fee-status.paid {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.fee-status.pending {
+  color: #c2410c;
+  background: #ffedd5;
+}
+
+.fee-status.submitted {
+  color: #7e22ce;
+  background: #f3e8ff;
+}
+
+/* =====================================================
+   PAYMENT SUBMITTED
+===================================================== */
+
+.payment-submitted {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.payment-submitted small {
+  color: #64748b;
+  font-size: 10px;
+}
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.fee-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.set-fee-btn,
+.verify-payment-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.set-fee-btn {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.set-fee-btn:hover {
+  background: #bae6fd;
+  transform: translateY(-1px);
+}
+
+.verify-payment-btn {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.verify-payment-btn:hover {
+  background: #bbf7d0;
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.fee-loading {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =====================================================
+   EMPTY TABLE
+===================================================== */
+
+.empty-fee-table {
+  text-align: center !important;
+  padding: 50px !important;
+  color: #94a3b8;
+  font-size: 14px !important;
+}
+
+/* =====================================================
+   MODAL OVERLAY
+===================================================== */
+
+.fee-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.fee-modal {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  animation: feeModalOpen 0.2s ease;
+}
+
+@keyframes feeModalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.fee-modal-header {
+  padding: 20px 22px;
+  background: linear-gradient(
+    135deg,
+    #0f766e,
+    #115e59
+  );
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fee-modal-header h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.fee-modal-header p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.fee-modal-header button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.fee-modal-header button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.fee-modal form {
+  padding: 24px;
+}
+
+.fee-form-group {
+  margin-bottom: 20px;
+}
+
+.fee-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fee-form-group input {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  color: #374151;
+  background: #f9fafb;
+  transition: 0.2s ease;
+}
+
+.fee-form-group input:focus {
+  border-color: #0f766e;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+/* =====================================================
+   MODAL BUTTONS
+===================================================== */
+
+.fee-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.fee-modal-actions button {
+  min-width: 105px;
+  height: 42px;
+  border: none;
+  border-radius: 9px;
+  padding: 0 17px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.fee-modal-actions button[type="button"] {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.fee-modal-actions button[type="button"]:hover {
+  background: #e2e8f0;
+}
+
+.fee-modal-actions button[type="submit"] {
+  background: #0f766e;
+  color: white;
+}
+
+.fee-modal-actions button[type="submit"]:hover {
+  background: #115e59;
+}
+
+.fee-modal-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+  .fee-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .fee-management-page {
+    padding: 18px;
+  }
+
+  .fee-page-header {
+    padding: 22px;
+  }
+
+  .fee-header-content h1 {
+    font-size: 23px;
+  }
+
+  .fee-toolbar {
+    align-items: stretch;
+  }
+
+  .fee-toolbar-title {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .fee-search {
+    width: 100%;
+  }
+
+  .fee-filter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .fee-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fee-summary-card {
+    padding: 18px;
+  }
+
+  .fee-header-content {
+    align-items: flex-start;
+  }
+
+  .fee-header-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 22px;
+  }
+
+  .fee-header-content h1 {
+    font-size: 20px;
+  }
+
+  .fee-header-content p {
+    font-size: 12px;
+  }
+
+  .fee-modal {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,185 @@
+/* ==========================================
+   Global Responsive Master Fixes
+========================================== */
+
+/* Ensure smooth resizing and prevent overflow */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fluid Media & Iframes (Handles YouTube & PDF Modals on all screens) */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================
+   Hero Section Responsive Overhaul
+========================================== */
+
+@media (max-width: 1200px) {
+  .hero-container {
+    max-width: 95%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 968px) {
+  .quran-hero {
+    padding: 60px 15px;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .hero-content {
+    align-items: center;
+  }
+  .hero-description {
+    max-width: 100%;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+  }
+  .hero-description {
+    font-size: 14px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .floating-badge-card {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px 12px;
+  }
+}
+
+/* ==========================================
+   Library Section Responsive Overhaul
+========================================== */
+
+@media (max-width: 1024px) {
+  .library-container {
+    padding: 60px 15px;
+  }
+  .books-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .library-header h1 {
+    font-size: 28px;
+  }
+  .library-header p {
+    font-size: 14px;
+  }
+  .library-filters {
+    gap: 6px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .filter-btn {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .books-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+/* ==========================================
+   Modals Responsive Overhaul (Video & PDF)
+========================================== */
+
+@media (max-width: 768px) {
+  .video-modal-container, 
+  .reader-modal {
+    width: 95vw;
+    height: 85vh;
+    max-height: 90vh;
+    border-radius: 16px;
+  }
+
+  .reader-header {
+    padding: 12px 15px;
+  }
+
+  .reader-meta h2 {
+    font-size: 15px;
+  }
+
+  .reader-meta p {
+    font-size: 11px;
+  }
+
+  .btn-close-reader {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-modal-overlay,
+  .reader-overlay {
+    padding: 10px;
+  }
+  .video-modal-container, 
+  .reader-modal {
+    width: 100vw;
+    height: 92vh;
+    border-radius: 12px;
+  }
+}
+
+/* Ultra-wide Screen / Large Display Optimization */
+@media (min-width: 1440px) {
+  .hero-container,
+  .library-container .books-grid,
+  .library-header {
+    max-width: 1350px;
+  }
+}

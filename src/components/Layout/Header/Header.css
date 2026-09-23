@@ -1,0 +1,172 @@
+/* HEADER MAIN WRAPPER - Reduced Height */
+.header-wrapper {
+  width: 100%;
+  padding: 8px 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-3d-card {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 52px; /* Fixed compact header height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: #063f32;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGO SECTION */
+.logo-3d {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.icon-wrapper-3d {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.logo-text span {
+  font-size: 9px;
+  color: #d2f3e7;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+/* NAV LINKS */
+.nav-links-3d {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-item {
+  color: #e2f1ec;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: rgba(47, 201, 142, 0.12);
+  color: #ffffff;
+}
+
+/* RIGHT ACTION BUTTONS - Standardized & Compact */
+.header-right-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-header {
+  height: 34px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+/* Individual Button Styles */
+.btn-result {
+  background: transparent;
+  color: #f4d77a;
+  border: 1px solid #f4d77a;
+}
+
+.btn-result:hover {
+  background: #f4d77a;
+  color: #063f32;
+}
+
+.btn-login {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-login:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.btn-enroll {
+  background: #f4d77a;
+  color: #063f32;
+  border: none;
+}
+
+.btn-enroll:hover {
+  background: #e5c663;
+}
+
+/* MOBILE TOGGLE BUTTON */
+.mobile-menu-toggle-3d {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .mobile-menu-toggle-3d {
+    display: block;
+  }
+
+  .nav-links-3d {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    right: 20px;
+    background: #063f32;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links-3d.mobile-nav-open {
+    display: flex;
+  }
+}

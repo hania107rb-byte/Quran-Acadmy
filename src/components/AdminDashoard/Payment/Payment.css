@@ -1,0 +1,101 @@
+.admin-payments-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.payments-header h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.payments-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.search-card input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.table-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  overflow-x: auto;
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.payments-table th,
+.payments-table td {
+  padding: 14px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.payments-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 700;
+}
+
+.student-name {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.course-chip {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.fee-tag {
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.fee-tag.paid {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.fee-tag.pending {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.toggle-fee-btn {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.toggle-fee-btn:hover {
+  background: #e2e8f0;
+}

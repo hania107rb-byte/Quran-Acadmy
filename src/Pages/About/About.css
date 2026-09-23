@@ -1,0 +1,400 @@
+:root {
+  --primary: #0f766e;
+  --primary-hover: #115e59;
+  --bg-gradient: linear-gradient(135deg, #f0fdfa 0%, #e6fffa 100%);
+  --text-dark: #1f2937;
+  --text-muted: #4b5563;
+  --shadow-md: 0 10px 25px -5px rgba(15, 118, 110, 0.1);
+  --shadow-lg: 0 25px 40px -10px rgba(15, 118, 110, 0.2);
+}
+
+.about-container {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+/* Ambient Background Blobs */
+.bg-blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(204,251,241,0.7) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.blob-top {
+  top: -20%;
+  left: -10%;
+  animation: floatBlob 15s infinite alternate ease-in-out;
+}
+.blob-bottom {
+  bottom: -10%;
+  right: -10%;
+  animation: floatBlob 18s infinite alternate-reverse ease-in-out;
+}
+
+/* Base Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes floatBlob {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 60px) scale(1.1); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9) translateY(30px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Hero Section */
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2rem 5rem;
+  position: relative;
+  z-index: 1;
+  gap: 4rem;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-block;
+  background: #ccfbf1;
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero-text .highlight {
+  color: var(--primary);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+.animate-slide-up { animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-slide-up-delayed { 
+  opacity: 0; 
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; 
+}
+
+.hero-graphic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.graphic-circle {
+  width: 350px;
+  height: 350px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  border: 8px solid #ccfbf1;
+  position: relative;
+  overflow: hidden; /* Added to contain the image */
+}
+
+/* Styling for the hero image */
+.graphic-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Added to keep image aspect ratio while covering the area */
+  border-radius: 50%; /* Make the image itself circular */
+}
+
+.graphic-circle::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border: 2px dashed rgba(15, 118, 110, 0.3);
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+  pointer-events: none; /* Make sure interactions go to the image */
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+/* Stats Section */
+.about-stats {
+  max-width: 1000px;
+  margin: 0 auto 6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-card {
+  background: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border-bottom: 4px solid var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+.slide-up-element {
+  opacity: 0;
+  animation: slideUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: var(--delay);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Core Values / Mission Section */
+.about-core {
+  max-width: 1200px;
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.core-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.core-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.core-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.core-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.core-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pop-in-element {
+  opacity: 0;
+  animation: popIn 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: var(--delay);
+}
+
+.core-card:hover {
+  transform: scale(1.03) translateY(-10px);
+  background: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.core-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: #f0fdfa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.5s ease;
+  overflow: hidden; /* Contain the image */
+}
+
+/* Styling for the core card images */
+.core-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area, maintain aspect ratio */
+  border-radius: 50%; /* Keep image circular */
+  transition: transform 0.5s ease; /* Maintain flip transition */
+}
+
+.core-card:hover .core-icon-wrapper {
+  transform: rotateY(180deg);
+  background: var(--primary);
+}
+
+.core-card:hover .core-card-image {
+  transform: rotateY(-180deg); /* Keeps the image content facing forward while wrapper flips */
+}
+
+.core-card h3 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.core-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Call To Action */
+.about-cta {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+
+.cta-content {
+  background: var(--primary);
+  padding: 4rem 2rem;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  box-shadow: var(--shadow-lg);
+  background-image: linear-gradient(135deg, var(--primary) 0%, #042f2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-content::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-start-learning {
+  background: white;
+  color: var(--primary);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-start-learning:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 968px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+  
+  .graphic-circle {
+    width: 280px;
+    height: 280px;
+  }
+}

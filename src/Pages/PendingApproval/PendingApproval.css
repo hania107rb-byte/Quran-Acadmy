@@ -1,0 +1,423 @@
+/* ==========================================
+   PENDING APPROVAL PAGE
+========================================== */
+
+.pending-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(32, 145, 120, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(212, 175, 55, 0.10),
+      transparent 35%
+    ),
+    #f5f8f7;
+}
+
+
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.pending-card {
+  width: 100%;
+  max-width: 560px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  padding: 45px 40px;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.08),
+    0 5px 15px rgba(0, 0, 0, 0.04);
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  animation: pendingCardEnter 0.6s ease;
+}
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+.pending-icon {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #e8f6f2,
+    #d7eee8
+  );
+
+  color: #138a72;
+
+  box-shadow:
+    0 10px 25px rgba(19, 138, 114, 0.15);
+
+  animation: iconPulse 2s infinite;
+}
+
+.pending-icon svg {
+  width: 45px;
+  height: 45px;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.pending-card h1 {
+  margin: 0 0 12px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #173b35;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.pending-description {
+  margin: 0 auto 25px;
+
+  max-width: 460px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #687875;
+}
+
+
+/* ==========================================
+   STATUS BOX
+========================================== */
+
+.pending-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: fit-content;
+
+  margin: 0 auto 25px;
+
+  padding: 11px 20px;
+
+  border-radius: 30px;
+
+  background: #fff8e6;
+
+  color: #9a7110;
+
+  border: 1px solid #f2dfad;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pending-status-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #e3aa28;
+
+  animation: statusBlink 1.5s infinite;
+}
+
+
+/* ==========================================
+   INFORMATION BOX
+========================================== */
+
+.pending-info {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: #f7faf9;
+
+  border: 1px solid #e4eeeb;
+
+  text-align: left;
+}
+
+.pending-info h3 {
+  margin: 0 0 10px;
+
+  font-size: 16px;
+
+  color: #214940;
+}
+
+.pending-info p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #71807d;
+}
+
+
+/* ==========================================
+   STEPS
+========================================== */
+
+.pending-steps {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 30px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #edf1f0;
+}
+
+.pending-step {
+  flex: 1;
+
+  text-align: center;
+}
+
+.pending-step-number {
+  width: 34px;
+  height: 34px;
+
+  margin: 0 auto 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9f5f1;
+
+  color: #138a72;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pending-step span {
+  display: block;
+
+  font-size: 12px;
+
+  color: #788683;
+
+  line-height: 1.4;
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.pending-button {
+  width: 100%;
+
+  margin-top: 30px;
+
+  padding: 14px 22px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #138a72,
+    #0d705e
+  );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 8px 20px rgba(19, 138, 114, 0.20);
+}
+
+.pending-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(19, 138, 114, 0.28);
+}
+
+.pending-button:active {
+  transform: translateY(0);
+}
+
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes pendingCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconPulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(19, 138, 114, 0.20);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 15px rgba(19, 138, 114, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(19, 138, 114, 0);
+  }
+}
+
+@keyframes statusBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .pending-page {
+    padding: 30px 15px;
+  }
+
+  .pending-card {
+    padding: 38px 28px;
+
+    border-radius: 20px;
+  }
+
+  .pending-card h1 {
+    font-size: 26px;
+  }
+
+  .pending-description {
+    font-size: 15px;
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+  .pending-page {
+    min-height: 100vh;
+
+    padding: 20px 12px;
+  }
+
+  .pending-card {
+    padding: 32px 20px;
+
+    border-radius: 18px;
+  }
+
+  .pending-icon {
+    width: 75px;
+    height: 75px;
+
+    margin-bottom: 20px;
+  }
+
+  .pending-icon svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .pending-card h1 {
+    font-size: 23px;
+  }
+
+  .pending-description {
+    font-size: 14px;
+  }
+
+  .pending-info {
+    padding: 16px;
+  }
+
+  .pending-steps {
+    gap: 5px;
+  }
+
+  .pending-step span {
+    font-size: 11px;
+  }
+
+  .pending-button {
+    margin-top: 25px;
+  }
+}

@@ -1,0 +1,127 @@
+.admin-messages-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.messages-header h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.messages-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.no-messages {
+  color: #64748b;
+  font-size: 14px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.message-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.message-card.unread {
+  border-left: 4px solid #059669;
+  background: #fdfdfd;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.message-header h3 {
+  font-size: 18px;
+  color: #0f172a;
+  margin: 0;
+}
+
+.message-email {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.status-tag {
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-tag.unread {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-tag.read {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.message-text {
+  font-size: 14px;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.message-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+}
+
+.message-date {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.message-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  background: #f1f5f9;
+  color: #334155;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,0 +1,511 @@
+/* =====================================================
+   STUDENT FEE PAGE
+===================================================== */
+
+.student-fee-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.student-fee-loading {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f766e;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.student-fee-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 30px;
+  margin-bottom: 25px;
+  border-radius: 18px;
+  color: white;
+  background: linear-gradient(135deg, #0f766e, #115e59);
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.18);
+}
+
+.student-fee-icon {
+  width: 62px;
+  height: 62px;
+  min-width: 62px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 28px;
+}
+
+.student-fee-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.student-fee-header p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* =====================================================
+   FEE CARD
+===================================================== */
+
+.student-fee-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 25px;
+  margin-bottom: 22px;
+}
+
+/* COURSE */
+
+.fee-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fee-course span,
+.fee-amount-box span {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.fee-course h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 22px;
+}
+
+/* AMOUNT */
+
+.fee-amount-box {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fee-amount-box strong {
+  color: #047857;
+  font-size: 28px;
+}
+
+/* =====================================================
+   FEE DETAILS
+===================================================== */
+
+.fee-details {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding-top: 22px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.fee-details > div {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 3px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.fee-details svg {
+  grid-row: span 2;
+  color: #0f766e;
+  font-size: 19px;
+}
+
+.fee-details span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.fee-details strong {
+  font-size: 14px;
+}
+
+/* =====================================================
+   STATUS COLORS
+===================================================== */
+
+.paid-text {
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.submitted-text {
+  color: #9333ea;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pending-text {
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =====================================================
+   SUCCESS BOX
+===================================================== */
+
+.fee-success-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.fee-success-box > svg {
+  font-size: 27px;
+  margin-top: 2px;
+}
+
+.fee-success-box h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.fee-success-box p {
+  margin: 0 0 7px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.fee-success-box small {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =====================================================
+   SUBMITTED BOX
+===================================================== */
+
+.fee-submitted-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  background: #faf5ff;
+  border: 1px solid #e9d5ff;
+  color: #7e22ce;
+}
+
+.fee-submitted-box > svg {
+  font-size: 27px;
+  margin-top: 2px;
+}
+
+.fee-submitted-box h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.fee-submitted-box p {
+  margin: 0 0 7px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.fee-submitted-box small {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =====================================================
+   PAYMENT FORM CARD
+===================================================== */
+
+.payment-form-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  margin-bottom: 22px;
+}
+
+.payment-form-header {
+  margin-bottom: 20px;
+}
+
+.payment-form-header h2 {
+  margin: 0 0 7px;
+  color: #111827;
+  font-size: 21px;
+}
+
+.payment-form-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =====================================================
+   PAYMENT INSTRUCTIONS
+===================================================== */
+
+.payment-instructions {
+  padding: 17px 18px;
+  margin-bottom: 23px;
+  border-radius: 12px;
+  background: #f0fdfa;
+  border-left: 4px solid #0f766e;
+}
+
+.payment-instructions h3 {
+  margin: 0 0 8px;
+  color: #115e59;
+  font-size: 15px;
+}
+
+.payment-instructions p {
+  margin: 4px 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =====================================================
+   PAYMENT FORM
+===================================================== */
+
+.payment-form-card form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.payment-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form-group label {
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.payment-form-group input,
+.payment-form-group select {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  outline: none;
+  background: #f9fafb;
+  color: #374151;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.payment-form-group input:focus,
+.payment-form-group select:focus {
+  border-color: #0f766e;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.payment-form-card form > button {
+  grid-column: 1 / -1;
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0f766e, #115e59);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.2s ease;
+}
+
+.payment-form-card form > button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 118, 110, 0.2);
+}
+
+.payment-form-card form > button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =====================================================
+   FEE NOT SET
+===================================================== */
+
+.fee-waiting-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px;
+  border-radius: 15px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #c2410c;
+}
+
+.fee-waiting-box > svg {
+  font-size: 27px;
+  margin-top: 2px;
+}
+
+.fee-waiting-box h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.fee-waiting-box p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.student-fee-empty {
+  min-height: 400px;
+  background: white;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.student-fee-empty > svg {
+  font-size: 50px;
+  color: #0f766e;
+  margin-bottom: 15px;
+}
+
+.student-fee-empty h2 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.student-fee-empty p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .student-fee-card {
+    grid-template-columns: 1fr;
+  }
+
+  .fee-details {
+    grid-template-columns: 1fr;
+  }
+
+  .fee-amount-box {
+    width: auto;
+  }
+
+  .payment-form-card form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .student-fee-page {
+    padding: 18px;
+  }
+
+  .student-fee-header {
+    padding: 22px;
+  }
+
+  .student-fee-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 22px;
+  }
+
+  .student-fee-header h1 {
+    font-size: 21px;
+  }
+
+  .student-fee-header p {
+    font-size: 12px;
+  }
+
+  .student-fee-card,
+  .payment-form-card {
+    padding: 20px;
+  }
+
+  .fee-course h2 {
+    font-size: 19px;
+  }
+
+  .fee-amount-box strong {
+    font-size: 24px;
+  }
+}

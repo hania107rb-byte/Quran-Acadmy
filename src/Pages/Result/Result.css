@@ -1,0 +1,1069 @@
+/* =========================================================
+   QURAN ACADEMY
+   PROFESSIONAL COMPACT RESULT CARD
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.user-result-page {
+  min-height: 100vh;
+  padding: 25px 15px 45px;
+  background: #f4f6f4;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #263a31;
+}
+
+/* =========================================================
+   SEARCH CARD
+   ========================================================= */
+
+.result-search-section {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-search-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(20, 50, 38, 0.08);
+  text-align: center;
+}
+
+.academy-result-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #07563f;
+  border-radius: 50%;
+  color: #d5b44f;
+  font-size: 23px;
+}
+
+.result-small-title {
+  color: #a17c25;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.result-search-card h1 {
+  margin: 7px 0;
+  color: #173e31;
+  font-family: Georgia, serif;
+  font-size: 27px;
+}
+
+.result-search-card p {
+  max-width: 350px;
+  margin: 0 auto 22px;
+  color: #808b85;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.result-search-form {
+  text-align: left;
+}
+
+.user-result-input {
+  margin-bottom: 13px;
+}
+
+.user-result-input label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  color: #53645b;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.user-result-input label span {
+  color: #a1aaa5;
+  font-weight: 500;
+}
+
+.input-with-icon {
+  height: 43px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  background: #f6f8f7;
+  border-radius: 6px;
+}
+
+.input-with-icon svg {
+  margin-right: 9px;
+  color: #07563f;
+  font-size: 12px;
+}
+
+.input-with-icon input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #263a31;
+  font-size: 11px;
+}
+
+.result-search-help {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 11px 0;
+  color: #7f8984;
+  font-size: 10px;
+}
+
+.result-search-help svg {
+  color: #08704f;
+}
+
+.result-error {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px;
+  margin-bottom: 10px;
+  background: #fff1f1;
+  border-radius: 5px;
+  color: #b33f3f;
+  font-size: 10px;
+}
+
+.view-result-btn {
+  width: 100%;
+  height: 43px;
+  border: none;
+  border-radius: 6px;
+  background: #07563f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.view-result-btn:hover {
+  background: #064936;
+}
+
+.result-search-note {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 15px;
+  color: #9aa39f;
+  font-size: 9px;
+}
+
+.result-search-note svg {
+  color: #b28a2c;
+}
+
+/* =========================================================
+   RESULT MAIN CONTAINER
+   ========================================================= */
+
+.student-result-section {
+  width: 100%;
+  max-width: 820px;
+  margin: auto;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.result-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.back-result-btn,
+.print-result-btn {
+  height: 36px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-result-btn {
+  background: #ffffff;
+  color: #375248;
+  box-shadow: 0 4px 15px rgba(20, 50, 38, 0.05);
+}
+
+.back-result-btn:hover {
+  background: #edf2ef;
+}
+
+.print-result-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #07563f;
+  color: #ffffff;
+}
+
+.print-result-btn:hover {
+  background: #064936;
+}
+
+/* =========================================================
+   RESULT HISTORY
+   ========================================================= */
+
+.result-history-card {
+  margin-bottom: 12px;
+  padding: 15px 18px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 22px rgba(20, 50, 38, 0.05);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-header span {
+  color: #a17c25;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.history-header h3 {
+  margin: 3px 0 0;
+  color: #173e31;
+  font-family: Georgia, serif;
+  font-size: 16px;
+}
+
+.results-count {
+  color: #07563f;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.result-history-list {
+  margin-top: 9px;
+}
+
+.history-item {
+  width: 100%;
+  padding: 10px 4px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #edf0ee;
+  cursor: pointer;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-item strong {
+  display: block;
+  color: #29463b;
+  font-size: 10px;
+}
+
+.history-item small {
+  display: block;
+  margin-top: 3px;
+  color: #99a39e;
+  font-size: 8px;
+}
+
+.history-item.active strong {
+  color: #07563f;
+}
+
+/* =========================================================
+   OFFICIAL RESULT CARD
+   ========================================================= */
+
+.official-result {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 7px !important;
+  box-shadow: 0 12px 40px rgba(20, 50, 38, 0.09);
+}
+
+.official-result::before,
+.official-result::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* =========================================================
+   OFFICIAL HEADER
+   ========================================================= */
+
+.official-header {
+  min-height: 135px;
+  padding: 25px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #07563f;
+  color: #ffffff;
+  text-align: center;
+}
+
+.academy-logo {
+  width: 47px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: #d8b64d;
+  font-size: 19px;
+}
+
+.academy-heading h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.academy-heading p {
+  margin: 5px 0 9px;
+  color: #d2e2dc;
+  font-size: 9px;
+}
+
+.academy-heading span {
+  color: #e3c65b;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.result-star {
+  color: #d8b64d;
+  font-size: 16px;
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.result-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 35px 0;
+}
+
+.result-divider span {
+  flex: 1;
+  height: 1px;
+  background: #e5e9e7;
+}
+
+.result-divider svg {
+  color: #b28a2c;
+  font-size: 11px;
+}
+
+/* =========================================================
+   EXAM INFORMATION
+   ========================================================= */
+
+.result-exam-banner {
+  margin: 16px 35px 0;
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  background: #f6f8f7;
+  border-radius: 5px;
+}
+
+.result-exam-banner > div {
+  padding: 0 15px;
+}
+
+.result-exam-banner > div + div {
+  border-left: 1px solid #e0e6e2;
+}
+
+.result-exam-banner span {
+  display: block;
+  margin-bottom: 4px;
+  color: #8d9993;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.result-exam-banner strong {
+  color: #194a39;
+  font-size: 10px;
+}
+
+/* =========================================================
+   STUDENT INFORMATION
+   ========================================================= */
+
+.student-result-info {
+  margin: 24px 35px 0;
+}
+
+.student-info-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e7e4;
+  color: #174c3a;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.student-info-title svg {
+  color: #b28a2c;
+  font-size: 10px;
+}
+
+.student-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 45px;
+  margin-top: 2px;
+}
+
+.result-info-item {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f2f1;
+}
+
+.result-info-item span {
+  width: 115px;
+  flex-shrink: 0;
+  color: #7d8983;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.result-info-item strong {
+  color: #253c33;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   SUBJECT + FINAL RESULT
+   SAME BOX
+   ========================================================= */
+
+.marks-section {
+  margin: 25px 35px 0;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid #e6ebe8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* =========================================================
+   SUBJECT TITLE
+   ========================================================= */
+
+.marks-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 15px;
+  background: #f6f8f7;
+  border-bottom: 1px solid #e2e7e4;
+  color: #174c3a;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.marks-title svg {
+  color: #b28a2c;
+  font-size: 10px;
+}
+
+/* =========================================================
+   MARKS TABLE
+   ========================================================= */
+
+.marks-table-wrapper {
+  padding: 0;
+  overflow-x: auto;
+}
+
+.student-marks-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+.student-marks-table th {
+  padding: 9px 8px;
+  background: #07563f;
+  color: #ffffff;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-align: left;
+}
+
+.student-marks-table td {
+  padding: 9px 8px;
+  border-bottom: 1px solid #edf0ee;
+  color: #40534a;
+  font-size: 9px;
+}
+
+.student-marks-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.subject-index {
+  color: #07563f;
+  font-weight: 800;
+}
+
+.subject-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.subject-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf6f2;
+  border-radius: 4px;
+  color: #07563f;
+  font-size: 9px;
+}
+
+.subject-name-cell strong {
+  display: block;
+  color: #29463b;
+  font-size: 9px;
+}
+
+.subject-name-cell small {
+  display: block;
+  margin-top: 2px;
+  color: #a0aaa5;
+  font-size: 6px;
+}
+
+.obtained-mark {
+  color: #07563f;
+}
+
+.subject-percentage strong {
+  font-size: 8px;
+}
+
+.percentage-track {
+  width: 55px;
+  height: 2px;
+  margin-top: 3px;
+  overflow: hidden;
+  background: #e8ecea;
+}
+
+.percentage-track span {
+  display: block;
+  height: 100%;
+  background: #b28a2c;
+}
+
+.grade-pill {
+  display: inline-flex;
+  min-width: 28px;
+  justify-content: center;
+  padding: 4px 5px;
+  border-radius: 3px;
+  background: #edf6f1;
+  color: #07563f;
+  font-size: 7px;
+  font-weight: 900;
+}
+
+.grade-f {
+  background: #fff0f0;
+  color: #b63e3e;
+}
+
+/* =========================================================
+   FINAL ACADEMIC RESULT
+   INSIDE SAME SUBJECT BOX
+   ========================================================= */
+
+.overall-performance {
+  margin: 0;
+  padding: 13px 15px;
+  background: #f6f8f7;
+  border-top: 1px solid #e2e7e4;
+  border-radius: 0;
+}
+
+.overall-performance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.overall-performance-header span {
+  color: #a17c25;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.overall-performance-header h2 {
+  margin: 3px 0 0;
+  color: #173e31;
+  font-family: Georgia, serif;
+  font-size: 14px;
+}
+
+.overall-performance-header svg {
+  color: #b28a2c;
+  font-size: 19px;
+}
+
+.student-result-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
+}
+
+.result-summary-card {
+  padding: 5px;
+  text-align: center;
+}
+
+.result-summary-card span {
+  display: block;
+  color: #929c97;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.result-summary-card strong {
+  display: block;
+  margin-top: 3px;
+  color: #174c3a;
+  font-size: 16px;
+}
+
+.grade-summary {
+  background: #07563f;
+  border-radius: 4px;
+}
+
+.grade-summary span,
+.grade-summary strong {
+  color: #ffffff;
+}
+
+/* =========================================================
+   FINAL STATUS
+   ========================================================= */
+
+.final-result-status {
+  margin: 22px 35px 0;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #edf7f1;
+  border-radius: 5px;
+}
+
+.result-fail {
+  background: #fff0f0;
+}
+
+.status-icon {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 50%;
+  color: #08704f;
+  font-size: 13px;
+}
+
+.result-fail .status-icon {
+  color: #b63e3e;
+}
+
+.final-result-status span {
+  display: block;
+  color: #7d8c85;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.final-result-status strong {
+  display: block;
+  margin-top: 2px;
+  color: #08704f;
+  font-size: 12px;
+}
+
+.result-fail strong {
+  color: #b63e3e;
+}
+
+.status-percentage {
+  margin-left: auto;
+  color: #07563f;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* =========================================================
+   TEACHER INFORMATION
+   ========================================================= */
+
+.teacher-result-info {
+  margin: 24px 35px 0;
+}
+
+.teacher-result-info .remarks-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e7e4;
+  color: #174c3a;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.teacher-result-info .remarks-title svg {
+  color: #b28a2c;
+}
+
+.teacher-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.teacher-info-grid > div {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.teacher-info-grid span {
+  width: 85px;
+  flex-shrink: 0;
+  color: #89958f;
+  font-size: 7px;
+  font-weight: 600;
+}
+
+.teacher-info-grid strong {
+  color: #29453a;
+  font-size: 9px;
+}
+
+/* =========================================================
+   TEACHER REMARKS
+   ========================================================= */
+
+.teacher-remarks {
+  margin: 20px 35px 0;
+  padding: 12px 0;
+}
+
+.teacher-remarks .remarks-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #174c3a;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.teacher-remarks .remarks-title svg {
+  color: #b28a2c;
+}
+
+.teacher-remarks p {
+  margin: 6px 0 0;
+  color: #5d6b64;
+  font-family: Georgia, serif;
+  font-size: 10px;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* =========================================================
+   OFFICIAL FOOTER
+   ========================================================= */
+
+.official-result-footer {
+  margin-top: 20px;
+  padding: 15px 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #f6f8f7;
+}
+
+.official-result-footer span {
+  display: block;
+  margin-bottom: 3px;
+  color: #929d97;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.official-result-footer strong {
+  color: #29473c;
+  font-size: 8px;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-center svg {
+  margin-bottom: 3px;
+  color: #b28a2c;
+  font-size: 10px;
+}
+
+.footer-center span {
+  color: #07563f;
+}
+
+.official-result-footer > div:last-child {
+  text-align: right;
+}
+
+/* =========================================================
+   NO SUBJECTS
+   ========================================================= */
+
+.no-subjects-message {
+  padding: 25px;
+  text-align: center;
+  color: #8a9690;
+}
+
+.no-subjects-message svg {
+  color: #b28a2c;
+  font-size: 20px;
+}
+
+.no-subjects-message h3 {
+  margin: 5px 0;
+  color: #40534a;
+  font-size: 12px;
+}
+
+.no-subjects-message p {
+  margin: 0;
+  font-size: 9px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .user-result-page {
+    padding: 12px 8px 40px;
+  }
+
+  .student-result-section {
+    max-width: 100%;
+  }
+
+  .result-actions {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .back-result-btn,
+  .print-result-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .official-header {
+    min-height: 125px;
+    padding: 22px 15px;
+  }
+
+  .academy-heading h1 {
+    font-size: 20px;
+  }
+
+  .academy-heading p {
+    font-size: 8px;
+  }
+
+  .result-star {
+    display: none;
+  }
+
+  .result-divider,
+  .student-result-info,
+  .marks-section,
+  .final-result-status,
+  .teacher-result-info,
+  .teacher-remarks {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .result-divider {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .result-exam-banner {
+    margin-left: 18px;
+    margin-right: 18px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .result-exam-banner > div {
+    padding: 0;
+  }
+
+  .result-exam-banner > div + div {
+    padding-top: 10px;
+    border-left: none;
+    border-top: 1px solid #e1e7e3;
+  }
+
+  .student-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-info-item span {
+    width: 115px;
+  }
+
+  .student-result-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .teacher-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .official-result-footer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  .official-result-footer > div:last-child {
+    text-align: center;
+  }
+
+  .footer-center {
+    order: -1;
+  }
+}
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 8mm;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+
+  .user-result-page {
+    padding: 0;
+    background: #ffffff !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .official-result {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .official-result::before,
+  .official-result::after {
+    display: none !important;
+  }
+
+  .official-header,
+  .student-marks-table th,
+  .grade-summary,
+  .result-pass,
+  .result-fail {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

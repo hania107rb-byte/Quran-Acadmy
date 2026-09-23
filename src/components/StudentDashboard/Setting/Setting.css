@@ -1,0 +1,77 @@
+.settings-page{
+    min-height:100vh;
+    background:#f4f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.settings-card{
+    width:600px;
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.settings-card h1{
+    color:#0b8457;
+    margin-bottom:10px;
+}
+
+.settings-card p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.setting-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    padding:18px;
+    background:#f8f9fa;
+    border-radius:10px;
+}
+
+.setting-item label{
+    font-weight:600;
+}
+
+.setting-item select{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.save-btn{
+    width:100%;
+    padding:15px;
+    background:#0b8457;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#086b46;
+}
+
+@media(max-width:768px){
+
+.settings-card{
+width:100%;
+padding:25px;
+}
+
+.setting-item{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+}

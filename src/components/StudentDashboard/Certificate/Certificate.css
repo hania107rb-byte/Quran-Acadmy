@@ -1,0 +1,108 @@
+.certificate-page{
+    min-height:100vh;
+    background:#f4f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.certificate{
+    width:900px;
+    background:white;
+    padding:60px;
+    border:10px solid #0b8457;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.certificate h3{
+    color:#0b8457;
+    font-size:28px;
+}
+
+.certificate h1{
+    margin:25px 0;
+    font-size:42px;
+    color:#222;
+}
+
+.presented{
+    font-size:18px;
+    color:#666;
+}
+
+.student-name{
+    margin:30px 0;
+    color:#0b8457;
+    font-size:40px;
+    border-bottom:2px solid #ddd;
+    display:inline-block;
+    padding-bottom:10px;
+}
+
+.description{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    margin:30px 0;
+}
+
+.certificate-info{
+    display:flex;
+    justify-content:space-around;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.certificate-info h4{
+    color:#0b8457;
+}
+
+.certificate-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.certificate-buttons button{
+    padding:14px 28px;
+    border:none;
+    background:#0b8457;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.certificate-buttons button:hover{
+    background:#086b46;
+}
+
+@media(max-width:768px){
+
+.certificate{
+width:100%;
+padding:30px;
+}
+
+.certificate h1{
+font-size:30px;
+}
+
+.student-name{
+font-size:28px;
+}
+
+.certificate-info{
+flex-direction:column;
+gap:20px;
+}
+
+.certificate-buttons{
+flex-direction:column;
+}
+
+}

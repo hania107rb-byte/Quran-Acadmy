@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top center, #062c26 0%, #031c18 50%, #01120f 100%);
+  padding: 40px 20px;
+}
+
+/* Glassmorphic Card styled for Quran Academy */
+.login-card-3d {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(8, 38, 33, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(16, 185, 129, 0.1);
+}
+
+/* Header Styles */
+.login-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-header h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.login-header p {
+  color: #a3b8b0;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Form Layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label-with-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #83a598;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.forgot-pass-link {
+  font-size: 0.85rem;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.forgot-pass-link:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+/* Input Icon Container */
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Icons styling & positioning */
+.input-icon-wrapper .input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #38bdf8;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Dark Green/Slate Input Fields */
+.input-icon-wrapper input {
+  width: 100% !important;
+  box-sizing: border-box;
+  padding: 14px 44px 14px 44px !important;
+  background: rgba(4, 28, 23, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-icon-wrapper input::placeholder {
+  color: #648378 !important;
+}
+
+.input-icon-wrapper input:focus {
+  border-color: #38bdf8 !important;
+  background: rgba(2, 20, 17, 0.95) !important;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* Password Toggle Eye Icon */
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent !important;
+  border: none !important;
+  color: #83a598 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.toggle-password-btn:hover {
+  color: #ffffff !important;
+}
+
+/* Options / Remember Me */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #a3b8b0;
+  user-select: none;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #0284c7;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.login-btn-3d {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  background: linear-gradient(135deg, #316631 0%, #0369a1 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 
+    0 4px 14px rgba(2, 132, 199, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.login-btn-3d:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1b8d4a 0%, #518157 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.5);
+}
+
+.login-btn-3d:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Error Alert */
+.error-message {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Footer Link */
+.signup-link {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #a3b8b0;
+}
+
+.highlight-link {
+  color: #05472c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.highlight-link:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}

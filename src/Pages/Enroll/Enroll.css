@@ -1,0 +1,70 @@
+.enroll-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f8f7;
+    padding:40px 20px;
+}
+
+.enroll-card{
+    width:550px;
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.enroll-card h1{
+    text-align:center;
+    color:#0b8457;
+    margin-bottom:10px;
+}
+
+.enroll-card p{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.enroll-card form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.enroll-card input,
+.enroll-card select{
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.enroll-card input:focus,
+.enroll-card select:focus{
+    outline:none;
+    border-color:#0b8457;
+}
+
+.enroll-card button{
+    padding:15px;
+    background:#0b8457;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.enroll-card button:hover{
+    background:#086b46;
+}
+
+@media(max-width:600px){
+    .enroll-card{
+        width:100%;
+        padding:25px;
+    }
+}
